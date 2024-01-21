@@ -79,6 +79,12 @@
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MataKuliah.Designer.vb">
+      <DependentUpon>MataKuliah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MataKuliah.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MenuUtama.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MataKuliah.resx">
+      <DependentUpon>MataKuliah.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuUtama.resx">
       <DependentUpon>MenuUtama.vb</DependentUpon>
