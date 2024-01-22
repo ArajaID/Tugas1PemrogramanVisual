@@ -116,4 +116,20 @@ Public Class MataKuliah
             End Try
         End If
     End Sub
+
+    Private Sub CariJamil_TextChanged(sender As Object, e As EventArgs) Handles CariJamil.TextChanged
+        Cmd = New OdbcCommand("SELECT * FROM tb_matkul WHERE nama_matkul like '%" & CariJamil.Text & "%'", Conn)
+
+        Rd = Cmd.ExecuteReader
+        Rd.Read()
+
+        If Rd.HasRows Then
+
+            Da = New OdbcDataAdapter("SELECT * FROM tb_matkul WHERE nama_matkul like '%" & CariJamil.Text & "%'", Conn)
+            Ds = New DataSet
+            Da.Fill(Ds, "ketemu")
+            DGVMatkulJamil.DataSource = Ds.Tables("ketemu")
+            DGVMatkulJamil.ReadOnly = True
+        End If
+    End Sub
 End Class

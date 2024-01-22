@@ -22,6 +22,7 @@ Partial Class MataKuliah
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MataKuliah))
         Me.btnSimpanJamil = New System.Windows.Forms.Button()
         Me.KodeMatkulJamil = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -39,6 +40,8 @@ Partial Class MataKuliah
         Me.btnKeluarJamil = New System.Windows.Forms.Button()
         Me.DGVMatkulJamil = New System.Windows.Forms.DataGridView()
         Me.SemesterJamil = New System.Windows.Forms.ComboBox()
+        Me.CariJamil = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.DGVMatkulJamil, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -181,9 +184,9 @@ Partial Class MataKuliah
         '
         Me.DGVMatkulJamil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DGVMatkulJamil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVMatkulJamil.Location = New System.Drawing.Point(22, 196)
+        Me.DGVMatkulJamil.Location = New System.Drawing.Point(22, 230)
         Me.DGVMatkulJamil.Name = "DGVMatkulJamil"
-        Me.DGVMatkulJamil.Size = New System.Drawing.Size(790, 276)
+        Me.DGVMatkulJamil.Size = New System.Drawing.Size(790, 242)
         Me.DGVMatkulJamil.TabIndex = 17
         '
         'SemesterJamil
@@ -195,11 +198,29 @@ Partial Class MataKuliah
         Me.SemesterJamil.Size = New System.Drawing.Size(121, 25)
         Me.SemesterJamil.TabIndex = 5
         '
+        'CariJamil
+        '
+        Me.CariJamil.Location = New System.Drawing.Point(125, 193)
+        Me.CariJamil.Name = "CariJamil"
+        Me.CariJamil.Size = New System.Drawing.Size(407, 24)
+        Me.CariJamil.TabIndex = 18
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(19, 196)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(100, 17)
+        Me.Label7.TabIndex = 19
+        Me.Label7.Text = "Cari Mata Kuliah"
+        '
         'MataKuliah
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(834, 490)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.CariJamil)
         Me.Controls.Add(Me.SemesterJamil)
         Me.Controls.Add(Me.DGVMatkulJamil)
         Me.Controls.Add(Me.btnKeluarJamil)
@@ -218,6 +239,7 @@ Partial Class MataKuliah
         Me.Controls.Add(Me.KodeMatkulJamil)
         Me.Controls.Add(Me.btnSimpanJamil)
         Me.Font = New System.Drawing.Font("Open Sans", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "MataKuliah"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -245,4 +267,6 @@ Partial Class MataKuliah
     Friend WithEvents btnKeluarJamil As Button
     Friend WithEvents DGVMatkulJamil As DataGridView
     Friend WithEvents SemesterJamil As ComboBox
+    Friend WithEvents CariJamil As TextBox
+    Friend WithEvents Label7 As Label
 End Class

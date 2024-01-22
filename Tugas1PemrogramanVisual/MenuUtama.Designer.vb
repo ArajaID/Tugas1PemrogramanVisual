@@ -22,6 +22,7 @@ Partial Class MenuUtama
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuUtama))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoginToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -84,7 +85,7 @@ Partial Class MenuUtama
         'MataKuliahToolStripMenuItem
         '
         Me.MataKuliahToolStripMenuItem.Name = "MataKuliahToolStripMenuItem"
-        Me.MataKuliahToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MataKuliahToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
         Me.MataKuliahToolStripMenuItem.Text = "Mata Kuliah"
         '
         'PictureBox1
@@ -105,6 +106,7 @@ Partial Class MenuUtama
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Open Sans", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "MenuUtama"
